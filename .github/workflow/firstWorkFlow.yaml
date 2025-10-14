@@ -5,4 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkoutCode
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: setup Nodejs
+        uses: actions/setup-Nodejs@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm install
