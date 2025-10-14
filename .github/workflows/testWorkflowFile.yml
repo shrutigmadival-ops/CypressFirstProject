@@ -1,5 +1,8 @@
 name: firstTestWorkflow
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - main
 jobs: 
   buildJob:
     runs-on: ubuntu-latest
