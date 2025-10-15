@@ -1,0 +1,13 @@
+name: upload Docker Image
+on:
+  workflow_run:
+    workflows: ["firstTestWorkflow"]
+    types:
+      - completed
+
+jobs:
+  cypressTestJob:
+  runs-on: ubuntu-latest
+  steps:
+    - name: test
+      runs: node -v
